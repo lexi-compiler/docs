@@ -28,4 +28,8 @@ One example of how this could be implemented (and how I'm currently implementing
 
 The compiler supports building native targets as well as for use on the JVM.
 
-# [Contributing to Lexi](contributing)
+# Contributing to Lexi
+
+If you're interested in getting involved, we're always looking for help!
+
+To get started, check out the [Contributor's Guide](contribute)
