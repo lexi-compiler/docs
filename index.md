@@ -8,7 +8,7 @@ The compiler is structured into phases, and all phases are exposed via a first-c
 
 # Multi-Language Support
 
-The goal with Lexi supports multiple languages, and is intended to provide fairly easy language support by creating a language semantics plugin.
+The goal with Lexi is to provide support for multiple languages through a language semantics plugin.
 
 To start, I'm implementing the current [Kotlin language spec](https://github.com/Kotlin/kotlin-spec). Next on the docket will be Scala. From there, I'll see what catches my fancy.
 
@@ -36,4 +36,4 @@ To get started, check out the [Contributor's Guide](docs/contribute)
 
 # Architecture
 
-Check out the [architecture docs](docs/architecture) to learn the internals of the compiler.
+Check out the [architecture docs](/docs/architecture) to learn the internals of the compiler.
