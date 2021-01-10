@@ -27,3 +27,5 @@ One example of how this could be implemented (and how I'm currently implementing
 # Multi-Target Support
 
 The compiler supports building native targets as well as for use on the JVM.
+
+# [Contributing to Lexi](contributing)
