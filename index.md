@@ -1,7 +1,3 @@
-# Lexi Compiler
-
-Lexi is a research project to build a compiler that supports multiple languages. The first two languages under development will be Kotlin and Scala.
-
 ## Setup
 
 You'll need `sbt 1.4.5`.
