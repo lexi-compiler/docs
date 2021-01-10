@@ -32,4 +32,4 @@ The compiler supports building native targets as well as for use on the JVM.
 
 If you're interested in getting involved, we're always looking for help!
 
-To get started, check out the [Contributor's Guide](contribute)
+To get started, check out the [Contributor's Guide](docs/contribute)
