@@ -2,7 +2,7 @@
 
 This project is open-source and contributions are more than welcome! Feel free to open a pull request! You can also reach out to me at matt@mattmoore.io if you have any questions or want to know how to get started.
 
-Check out the [architecture docs](docs/README.md) to learn the internals of the compiler.
+Check out the [architecture docs](docs/architecture) to learn the internals of the compiler.
 
 # Developer Setup
 
