@@ -55,8 +55,8 @@ To start, I'm implementing the current [Kotlin language spec](https://github.com
 
 At a high level, a language semantics plugin does the following:
 
-1. Parses the source code into a language-specific TAST (Typed Abstract Syntax Tree).
-1. Transforms the TAST into the Lexi intermediate representation.
+1. Parses the source code into a language-specific AST (Abstract Syntax Tree).
+1. Transforms the language-specific AST into the Lexi intermediate representation&mdash;a TAST (Typed Abstract Syntax Tree).
 
 One example of how a language plugin can be implemented (and how I'm currently implementing JVM languages like Kotlin and Scala):
 
