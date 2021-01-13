@@ -41,17 +41,13 @@ Dotty (Scala 3) has introduced a new compiler that is quite magnificent. In part
 
 Lexi is adopting the TASTy concept to provide language-agnostic representation of program logic. With Lexi, you can code in Python, Kotlin, Scala, etc...; yet each language will get compiled to an intermediate TASTy format that can then be transformed to any target - JVM, native, etc....
 
-# Officially Supported API
+# Key Features
+
+## Officially Supported API
 
 The compiler is structured into phases, and all phases are exposed via a first-class API. This means that all tree structures can be accessed and modified at compile-time via custom plugins.
 
-# Language-Independent IR (Intermediate Representation)
-
-Lexi provides all this magic by providing an IR that acts as an abstraction between individual programming languages and target execution platforms. Having an IR is not a new concept; as mentioned earlier, Microsoft has done this. The JVM executes bytecode&mdash;itself an intermediate representation.
-
-What I'm doing new is implementing this concept for multi-language and multi-target support. I'm not sure why this hasn't already been done&mdash;perhaps language communities are too focused on their own languages without focusing on interoperability between platforms.
-
-# Multi-Language Support
+## Multi-Language Support
 
 The goal with Lexi is to provide support for multiple languages through a language semantics plugin. The syntax and semantics for a given language is defined as a language plugin, which is then included in the compiler frontend.
 
@@ -69,9 +65,15 @@ One example of how a language plugin can be implemented (and how I'm currently i
 1. Apply any language-specific semantic rules (type features, validity checks, etc...) to the AST.
 1. Define a translation between the final AST and Lexi's built-in IR tree. From there Lexi will handle the rest of the backend compiler tasks, including backend specific code generation (JVM, native, etc...).
 
-# Multi-Target Support
+## Multi-Target Support
 
 The compiler supports building native targets as well as for use on the JVM.
+
+## Language-Independent IR (Intermediate Representation)
+
+Lexi provides all this magic by providing an IR that acts as an abstraction between individual programming languages and target execution platforms. Having an IR is not a new concept; as mentioned earlier, Microsoft has done this. The JVM itself executes bytecode&mdash;another example of an intermediate representation.
+
+What I'm doing new is implementing this concept for multi-language and multi-target support. I'm not sure why this hasn't already been done&mdash;perhaps language communities are too focused on their own languages without focusing on interoperability between platforms.
 
 # Contributing to Lexi
 
