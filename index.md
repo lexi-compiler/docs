@@ -1,6 +1,6 @@
 # Motivations
 
-## Compilers Are Hard
+## Compiler Integration/Modification Is Poor
 
 Having tinkered with a few compilers, I've noticed that many compilers can be difficult to work with and integrate with, especially when it comes to creating compiler plugins and easily accessing and modifying compiler internals. Lexi is intended to provide a multi-lingual and multi-target compiler that provides for easy modification via a formally supported first-class API.
 
@@ -21,11 +21,21 @@ Frankly, this is dumb. So much code gets written in different languages that can
 
 Once Lexi is functioning, all that's needed is to define language-specific syntax and semantics, then translate that to Lexi's IR. From there, any language can access another language's library.
 
-## Inspirations
+### Lack of APIs / Poor Abstractions
+
+I started tinkering with the Kotlin compiler to build some plugins. Now please note that this is not a bashing session on the Kotlin compiler. However, while attempting to work with its internals I noted that the Kotlin compiler is constantly changing and still does not have proper API support. In fact, at this moment there is no formal API. Furthermore, the Kotlin compiler is structured in a way that requires heavy dependence on PSI elements. These can be painful to work with and encode for other use cases. With Lexi, the goal is to remain independent from PSI&mdash;yet provide easy integration with PSI, especially for integration with IntelliJ.
+
+Additionally, while I was initially excited about Kotlin Native, I quickly became discouraged with it. Kotlin Native has enough language differences that you're really not using the same code. Multiplatform is, in my humble opinion, a travesty. This was an opportunity for a compiler to solve cross-platform problems in a truly magical way, and yet it feels like a failure that requires more effort than it's really worth.
+
+Kotlin C-Interop is much nicer than many other languages, but frankly it still requires too much heavy lifting. If you're using Native, you get access to the cinterop tool, but you still have to deal with Native code by concerning yourself too much with setup to get it to work.
+he user
+If you want to interop from JVM, you still have to manually deal with JNI. JNI is very tedious to deal with and takes a lot of error-prone effort to get right.
+
+Lexi will provide true first-class abstractions around Native/JVM. The JNI layer will be handled automatically, and the goal is to provide compatibility with Native or JVM without being visible to the end user of the language. This means you can pull in shared native libraries and use them the same way whether you're compiling your program through Lexi for JVM or a native target.
 
 ### MS CLR / .NET
 
-Honestly, Microsoft had a good idea in mind when they built the Common Language Runtime. They built a really solid platform to run multiple languages. Of course, CLR/.NET is an MS technology and only supports the languages they provide. The goal with Lexi is to truly make plug-and-play support easy to do with any language.
+Honestly, Microsoft had a good idea in mind when they built the Common Language Runtime. They built a really solid platform to run multiple languages. Of course, CLR/.NET is an MS technology and only supports the languages they provide and is predominantly intended for Windows. The goal with Lexi is to truly make plug-and-play support easy to do with any language on any platform.
 
 ### Dotty / Scala 3
 
