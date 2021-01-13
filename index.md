@@ -55,8 +55,8 @@ To start, I'm implementing the current [Kotlin language spec](https://github.com
 
 At a high level, a language semantics plugin does the following:
 
-1. Parses the source code into a language-specific TAST.
-1. Transforms the AST into the Lexi intermediate representation.
+1. Parses the source code into a language-specific TAST (Typed Abstract Syntax Tree).
+1. Transforms the TAST into the Lexi intermediate representation.
 
 One example of how a language plugin can be implemented (and how I'm currently implementing JVM languages like Kotlin and Scala):
 
@@ -74,6 +74,8 @@ The compiler supports building native targets as well as for use on the JVM.
 Lexi provides all this magic by providing an IR that acts as an abstraction between individual programming languages and target execution platforms. Having an IR is not a new concept; as mentioned earlier, Microsoft has done this. The JVM itself executes bytecode&mdash;another example of an intermediate representation.
 
 What I'm doing new is implementing this concept for multi-language and multi-target support. I'm not sure why this hasn't already been done&mdash;perhaps language communities are too focused on their own languages without focusing on interoperability between platforms.
+
+The intermediate TAST can be serialized into a binary format similar to Java's `.class` files, allowing for easy use with other VMs or tooling.
 
 # Contributing to Lexi
 
