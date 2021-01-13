@@ -27,9 +27,7 @@ I started tinkering with the Kotlin compiler to build some plugins. Now please n
 
 Additionally, while I was initially excited about Kotlin Native, I quickly became discouraged with it. Kotlin Native has enough language differences that you're really not using the same code. Multiplatform is, in my humble opinion, a travesty. This was an opportunity for a compiler to solve cross-platform problems in a truly magical way, and yet it feels like a failure that requires more effort than it's really worth.
 
-Kotlin C-Interop is much nicer than many other languages, but frankly it still requires too much heavy lifting. If you're using Native, you get access to the cinterop tool, but you still have to deal with Native code by concerning yourself too much with setup to get it to work.
-he user
-If you want to interop from JVM, you still have to manually deal with JNI. JNI is very tedious to deal with and takes a lot of error-prone effort to get right.
+Kotlin C-Interop is much nicer than many other languages, but frankly it still requires too much heavy lifting. If you're using Native, you get access to the cinterop tool, but you still have to deal with Native code by concerning yourself too much with setup to get it to work. If you want to interop from JVM, you still have to manually deal with JNI. JNI is very tedious to deal with and takes a lot of error-prone effort to get right.
 
 Lexi will provide true first-class abstractions around Native/JVM. The JNI layer will be handled automatically, and the goal is to provide compatibility with Native or JVM without being visible to the end user of the language. This means you can pull in shared native libraries and use them the same way whether you're compiling your program through Lexi for JVM or a native target.
 
@@ -41,7 +39,7 @@ Honestly, Microsoft had a good idea in mind when they built the Common Language 
 
 Dotty (Scala 3) has introduced a new compiler that is quite magnificent. In particular, it makes use of the new TASTy (Typed Abstract Syntax Trees). TLDR: TASTy is a formalized tree structure that encodes sufficient information about different versions of code to allow for compatibility between Scala 2 and 3.
 
-Lexi is adopting the TASTy concept to provide language-agnostic representation of program logic. With Lexi, you can code and Python, Kotlin, Scala, etc...and yet each language will get compiled to an intermediate TASTy format that can then be transformed to any target - JVM, native, etc....
+Lexi is adopting the TASTy concept to provide language-agnostic representation of program logic. With Lexi, you can code in Python, Kotlin, Scala, etc...; yet each language will get compiled to an intermediate TASTy format that can then be transformed to any target - JVM, native, etc....
 
 # Officially Supported API
 
