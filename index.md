@@ -31,11 +31,11 @@ Kotlin C-Interop is much nicer than many other languages, but frankly it still r
 
 Lexi will provide true first-class abstractions around Native/JVM. The JNI layer will be handled automatically, and the goal is to provide compatibility with Native or JVM without being visible to the end user of the language. This means you can pull in shared native libraries and use them the same way whether you're compiling your program through Lexi for JVM or a native target.
 
-### MS CLR / .NET
+### Microsoft Common Language Runtime (CLR) & .NET
 
 Honestly, Microsoft had a good idea in mind when they built the Common Language Runtime. They built a really solid platform to run multiple languages. Of course, CLR/.NET is an MS technology and only supports the languages they provide and is predominantly intended for Windows. The goal with Lexi is to truly make plug-and-play support easy to do with any language on any platform.
 
-### Dotty / Scala 3
+### Dotty (Scala 3)
 
 Dotty (Scala 3) has introduced a new compiler that is quite magnificent. In particular, it makes use of the new TASTy (Typed Abstract Syntax Trees). TLDR: TASTy is a formalized tree structure that encodes sufficient information about different versions of code to allow for compatibility between Scala 2 and 3.
 
