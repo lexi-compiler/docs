@@ -47,7 +47,7 @@ The compiler is structured into phases, and all phases are exposed via a first-c
 
 # Language-Independent IR (Intermediate Representation)
 
-Lexi provides all this magic by providing an IR that acts as an abstraction between individual programming languages and target execution platforms. Having an IR is not a new concept; as mentioned earlier, Microsoft has done this. The JVM itself executes bytecode, which is an intermediate representation itself.
+Lexi provides all this magic by providing an IR that acts as an abstraction between individual programming languages and target execution platforms. Having an IR is not a new concept; as mentioned earlier, Microsoft has done this. The JVM executes bytecode&mdash;itself an intermediate representation.
 
 What I'm doing new is implementing this concept for multi-language and multi-target support. I'm not sure why this hasn't already been done&mdash;perhaps language communities are too focused on their own languages without focusing on interoperability between platforms.
 
