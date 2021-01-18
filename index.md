@@ -4,7 +4,7 @@
 
 Having tinkered with a few compilers, I've noticed that many compilers can be difficult to work with and integrate with, especially when it comes to creating compiler plugins and easily accessing and modifying compiler internals. Lexi is intended to provide a multi-lingual and multi-target compiler that provides for easy modification via a formally supported first-class API.
 
-## Compilers Are Too Specialized
+## Compiler Abstractions
 
 Compilers are typically built for a single language. Languages these days are converging more and more in their design, but compilers remain divergent.
 
