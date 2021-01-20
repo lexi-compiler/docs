@@ -31,6 +31,16 @@ Kotlin C-Interop is much nicer than many other languages, but frankly it still r
 
 Lexi will provide true first-class abstractions around Native/JVM. The JNI layer will be handled automatically, and the goal is to provide compatibility with Native or JVM without being visible to the end user of the language. This means you can pull in shared native libraries and use them the same way whether you're compiling your program through Lexi for JVM or a native target.
 
+### Compiler Safety
+
+Programmers stand to benefit from safer compilers. By this I mean compilers that catch errors in your code before you roll your program out.
+
+Obviously type systems are a great way to handle this, and many languages are increasingly getting more decent type systems.
+
+However, Lexi will attempt to go a step further. Rather than relying on the use of a type system (which doesn't exist in languages like Ruby or Python for example) Lexi will attempt to infer possible errors in your program - it'll detect when an IO operation is occurring. Of course, languages like Haskell enforce this via monads. Scala has monadic functions, but doesn't enforce them.
+
+Lexi will attempt to catch errors without the need for you using monads. Additionally Lexi will offer a potential rewrite of your code to make it safer. This means you don't have to be a functional programming expert to make use of safer functional programming rules. Lexi will effectively do more thinking for you, and act as a guide to make your code safer.
+
 ### Microsoft Common Language Runtime (CLR) & .NET
 
 Honestly, Microsoft had a good idea in mind when they built the Common Language Runtime. They built a really solid platform to run multiple languages. Of course, CLR/.NET is an MS technology and only supports the languages they provide and is predominantly intended for Windows. The goal with Lexi is to truly make plug-and-play support easy to do with any language on any platform.
