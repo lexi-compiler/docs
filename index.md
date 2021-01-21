@@ -47,7 +47,7 @@ Honestly, Microsoft had a good idea in mind when they built the Common Language 
 
 ### Dotty (Scala 3)
 
-Dotty (Scala 3) has introduced a new compiler that is quite magnificent. In particular, it makes use of the new TASTy (Typed Abstract Syntax Trees). TLDR: TASTy is a formalized tree structure that encodes sufficient information about different versions of code to allow for compatibility between Scala 2 and 3.
+Dotty (Scala 3) has introduced a magnificent compiler. Among many other capabilities, it makes use of the new binary serializable TASTy (Typed Abstract Syntax Trees) format. TLDR: TASTy is a formalized tree structure that encodes sufficient information about different versions of code to allow for compatibility between Scala 2 and 3.
 
 Lexi is adopting the TASTy concept to provide language-agnostic representation of program logic. With Lexi, you can code in Python, Kotlin, Scala, etc...; yet each language will get compiled to an intermediate TASTy format that can then be transformed to any target - JVM, native, etc....
 
