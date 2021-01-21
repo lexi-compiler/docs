@@ -33,7 +33,7 @@ Lexi will provide true first-class abstractions around Native/JVM. The JNI layer
 
 ### Compiler Safety
 
-Programmers stand to benefit from safer compilers. By this I mean compilers that catch errors in your code before you roll your program out.
+Developers stand to benefit from safer compilers. By this I mean compilers that catch errors in your code before you roll your program out.
 
 Obviously type systems are a great way to handle this, and many languages are increasingly getting more decent type systems.
 
