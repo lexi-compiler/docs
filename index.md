@@ -1,3 +1,7 @@
+# Architecture
+
+Check out the [architecture docs](/docs/architecture) to learn the internals of the compiler.
+
 # Motivations
 
 ## Compiler Integration/Modification Is Poor
@@ -93,7 +97,3 @@ The intermediate TAST can be serialized into a binary format similar to Java's `
 If you're interested in getting involved, we're always looking for help!
 
 To get started, check out the [Contributor's Guide](docs/contribute)
-
-# Architecture
-
-Check out the [architecture docs](/docs/architecture) to learn the internals of the compiler.
