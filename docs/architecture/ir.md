@@ -1,1 +1,1 @@
-# Lexi Intermediate Representation
+# Intermediate Representation
