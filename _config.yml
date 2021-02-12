@@ -1,2 +1,4 @@
 theme: jekyll-theme-architect
-site.show_downloads: true
+show_downloads: true
+github:
+  tar_url: "https://github.com/lexi-compiler/lexi/files/5968234/lexi-0.1.0-dev.2.tar.gz"
