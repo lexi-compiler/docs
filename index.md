@@ -6,11 +6,11 @@
 
 Or `brew tap lexi-compiler/tap` and then `brew install lexi`.
 
-# Architecture
+# Compiler Documentation
 
 Check out the [architecture docs](/docs/architecture) to learn the internals of the compiler.
 
-To learn more why I started the Lexi compiler, see [Motivations](/docs/motivations)
+To learn more why I started the Lexi compiler, see [motivations](/docs/motivations)
 
 # Contributing to Lexi
 

@@ -8,6 +8,12 @@ Check out the [architecture docs](/docs/architecture) to learn the internals of 
 
 You'll need `sbt 1.4.5`.
 
+### _Note:_
+
+While Lexi is itself written in Scala (v3), the JDK you use must be greater than 8.
+
+While you can compile with JDK 8 and above, I build against [GraalVM Community Edition 11](https://www.graalvm.org). The reason for this is to easily generate [native images of the compiler](https://www.graalvm.org/reference-manual/native-image/), so compiler end users do not have to worry about JDK versions.
+
 To run the tests:
 
 ```shell
@@ -17,29 +23,19 @@ sbt test
 To build a standalone compiler jar file:
 
 ```shell
-sbt clean compile assembly
+sbt graalvm-native-image:packageBin
 ```
 
-You can then interpret Kotlin code:
+This will compile a native executable stored in `target/graalvm-native-image/`
+
+You can compile a Kotlin file into a Java class file:
 
 ```shell
-java -jar target/scala-2.13/lexi-assembly-0.1.0-SNAPSHOT.jar -lang kotlin "val x = 5"
-```
-
-You would interpret Scala by changing the `-lang` switch option:
-
-```shell
-java -jar target/scala-2.13/lexi-assembly-0.1.0-SNAPSHOT.jar -lang scala "val x = 5"
-```
-
-You can also compile a Kotlin file into a Java class file:
-
-```shell
-java -jar target/scala-2.13/lexi-assembly-0.1.0-SNAPSHOT.jar Main.kt
+lexi Main.kt
 ```
 
 Same concept for Scala:
 
 ```shell
-java -jar target/scala-2.13/lexi-assembly-0.1.0-SNAPSHOT.jar Main.scala
+lexi Main.scala
 ```
