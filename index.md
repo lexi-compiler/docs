@@ -1,3 +1,11 @@
+# Install
+
+## macOS
+
+`brew install lexi-compiler/tap/lexi`
+
+Or `brew tap lexi-compiler/tap` and then `brew install lexi`.
+
 # Architecture
 
 Check out the [architecture docs](/docs/architecture) to learn the internals of the compiler.
