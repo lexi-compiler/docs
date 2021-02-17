@@ -2,4 +2,4 @@ theme: jekyll-theme-architect
 show_downloads: true
 title: Lexi Compiler
 github:
-  tar_url: "https://github.com/lexi-compiler/lexi/releases/download/v0.1.0-dev.6/lexi-0.1.0-dev.6.tar.gz"
+  tar_url: "https://github.com/lexi-compiler/lexi/releases/download/v0.1.0-dev.7/lexi-0.1.0-dev.7.tar.gz"
