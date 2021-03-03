@@ -22,6 +22,6 @@ To run the tests: `sbt test`
 
 ## Building
 
-To build a standalone compiler executable: `sbt graalvm-native-image:packageBin`. This will compile a native executable stored in `target/graalvm-native-image/`
+To build a standalone compiler executable: `sbt nativeImage`. This will compile a native executable stored in `target/native-image/`
 
 You can compile a Kotlin file into a Java class file: `lexi Main.kt`. The same concept applies for Scala: `lexi Main.scala`
