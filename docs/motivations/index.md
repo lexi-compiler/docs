@@ -17,7 +17,7 @@ What if I wanted to access Python libraries but using a strongly typed language 
 1. Rewrite the Python library in Scala or Kotlin.
 1. Build some sort of REST API or equivalent around the library and consume it as a service.
 
-Frankly, this is dumb. So much code gets written in different languages that cannot be shared outside that language or even often a different version of that same language.
+For obvious reasons, this is a pain to deal with. So much code gets written in different languages that cannot be shared outside that language or even often a different version of that same language.
 
 Once Lexi is functioning, all that's needed is to define language-specific syntax and semantics, then translate that to Lexi's IR. From there, any language can access another language's library.
 
